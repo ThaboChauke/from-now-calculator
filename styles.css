@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Leckerli+One&family=Open+Sans:ital,wght@0,700;1,700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 body {
@@ -11,6 +13,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(to left, #4e54c8, #8f94fb);
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -50,7 +53,7 @@ body {
     background-color: aqua;
 }
 
-.time {
+.time, .clock {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,4 +69,18 @@ body {
     text-align: center;
     border-color: #000;
     cursor: pointer;
+}
+
+
+.clock div {
+    background-color: cyan;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #000;
+    border-radius: 5px;
+    margin-left: 10px;
 }

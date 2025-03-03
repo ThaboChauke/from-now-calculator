@@ -11,10 +11,11 @@
         <div class="container">
             <h1>From Now Calculator</h1>
 
-            <div class="time">
-                <input type="text" disabled placeholder="00">
-                <input type="text" disabled placeholder="00">
-                <input type="text" disabled placeholder="00">
+            <div class="clock">
+                <div id="currentHours">00</div>
+                <div id="currentMinutes">00</div>
+                <div id="currentSeconds">00</div>
+                
             </div>
 
             <div class="time">
@@ -24,10 +25,10 @@
             </div>
 
             <div class="button">
-                <input class="submitBtn" type="button" value="Submit">
+                <input class="submitBtn" id="submitBtn" type="button" value="Submit">
             </div>
         </div>
 
-        
+        <script src="script.js"></script>
     </body>
 </html>
