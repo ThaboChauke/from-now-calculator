@@ -10,7 +10,9 @@
 
         <div class="container">
             <h1>From Now Calculator</h1>
-
+            
+            <div id="toast" class="toast">ENTER AT LEAST ONE</div>
+            
             <div class="clock">
                 <div id="currentHours">00</div>
                 <div id="currentMinutes">00</div>
@@ -19,14 +21,19 @@
             </div>
 
             <div class="time">
-                <input type="text" name="hours" placeholder="00">
-                <input type="text" name="minutes" placeholder="00">
-                <input type="text" name="seconds" placeholder="00">
+                <input id="userHours" type="text" name="hours" placeholder="00">
+                <input id="userMinutes" type="text" name="minutes" placeholder="00">
+                <input id="userSeconds" type="text" name="seconds" placeholder="00">
             </div>
+
+            <div id="date" class="date"></div>
+
 
             <div class="button">
                 <input class="submitBtn" id="submitBtn" type="button" value="Submit">
+                <input class="resetBtn" id="resetBtn" type="button" value="Reset">
             </div>
+
         </div>
 
         <script src="script.js"></script>

@@ -53,7 +53,7 @@ body {
     background-color: aqua;
 }
 
-.time, .clock {
+.time, .clock, .date {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,11 +69,12 @@ body {
     text-align: center;
     border-color: #000;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 
 .clock div {
-    background-color: cyan;
+    border: 2px solid #000;
     height: 50px;
     width: 50px;
     display: flex;
@@ -83,4 +84,61 @@ body {
     color: #000;
     border-radius: 5px;
     margin-left: 10px;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 200px;
+    background-color: #db1717;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.date.show {
+    display: flex;
+    font-size: 25px;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+
+.resetBtn {
+    visibility: hidden;
+}
+
+.resetBtn.show {
+    visibility: visible;
+    width: 100%;
+    padding: 12px 0px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffff;
+    background-color: #8f94fb;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.resetBtn:hover {
+    background-color: aqua;
+}
+
+.button input{
+    margin-bottom: 0%;
 }
