@@ -9,6 +9,7 @@ const userMinsEl = document.getElementById("userMinutes")
 const userHoursEl = document.getElementById("userHours")
 const userSecondsEl = document.getElementById("userSeconds")
 const newDateEl = document.getElementById("date")
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 const runClock = setInterval(function currentTime() {
     let dateObject = new Date()
@@ -23,18 +24,14 @@ const runClock = setInterval(function currentTime() {
     currentHoursEl.textContent = hours
     currentMinsEl.textContent = minutes
     currentSecondsEl.textContent = seconds
-
-    console.log(dateObject.getDay())
-
 }, 1000)
-
 
 submitBtn.addEventListener("click", function() {
     let dateObject = new Date()
 
-    if (userHoursEl.value !== null) dateObject.setHours(dateObject.getHours() + +userHoursEl.value)
-    if (userMinsEl.value !== null) dateObject.setMinutes(dateObject.getMinutes() + +userMinsEl.value)
-    if (userSecondsEl.value !== null) dateObject.setSeconds(dateObject.getSeconds() + +userSecondsEl.value)
+    if (userHoursEl.value !== "") dateObject.setHours(dateObject.getHours() + +userHoursEl.value)
+    if (userMinsEl.value !== "") dateObject.setMinutes(dateObject.getMinutes() + +userMinsEl.value)
+    if (userSecondsEl.value !== "") dateObject.setSeconds(dateObject.getSeconds() + +userSecondsEl.value)
     
     if (userSecondsEl.value === "" && userMinsEl.value === "" && userHoursEl.value === "") {
         showToast()
@@ -47,7 +44,6 @@ submitBtn.addEventListener("click", function() {
         userMinsEl.disabled = true
         userSecondsEl.disabled = true
 
-        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
         const dayName = days[dateObject.getDay()]
 
         newDateEl.textContent = dayName + " " + dateObject.getDate() + "/" + dateObject.getMonth() + "/" + dateObject.getFullYear()
